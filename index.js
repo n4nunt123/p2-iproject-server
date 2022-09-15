@@ -38,6 +38,6 @@ io.on('connection', (socket) => {
 app.use(route)
 app.use(errorHandler)
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`app listen on port ${port}`)
 })
