@@ -33,6 +33,11 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log(`user ${socket.id} left`)
   })
+
+  socket.on('forceDisconnect', () => {
+    console.log('disconnected')
+    socket.disconnect()
+  })
 })
 
 app.use(route)
